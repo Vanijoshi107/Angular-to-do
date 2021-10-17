@@ -1,0 +1,22 @@
+
+.container{
+    width:300px ;
+    margin: 0 auto;
+}
+.todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.todo li{
+    margin-top: 5px;
+}
+.todo button{
+    margin-left:5px ;
+}
+.tdform{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
