@@ -11,7 +11,7 @@ import { Todo } from 'src/models/todo.model';
 export class AppComponent {
   todos: Todo[]= [
     new Todo(Guid.create(), 'wash car',false),
-    new Todo(Guid.create(), 'Buy Groceries',false),
+    new Todo(Guid.create(), 'Buy Groceries',false)
   ]
 
   onSubmit(form:NgForm){

@@ -1,35 +1,37 @@
 <div class="container">
-  <h2>To-Do App</h2>
+  <h4>To-Do App</h4> <hr>
+  <!-- <h5>Add new Tasks</h5> -->
+  <form class="tdform" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="input-field">
+        <input id="title" type="text" name="title" ngModel>
+      </div>
 
-  <form class="tdform" #f="ngForm"(ngSubmit)="onSubmit(f)">
-    <div>
-      <input type="text " id="title" name="title" ngModel>
-    </div>
-    <div>
-      <button type="submit" class="btn-floating  waves-effect waves-light green"> <i class="material-icons">add</i></button>
+    <div class="buttn">
+      <button type="submit" (click)="onSubmit" class="btn-floating  waves-effect waves-light green"> <i class="material-icons">add</i></button>
     </div>
   </form>
+
+  <!--Step:1-- Displaying todos -->
   <ul class="todo">
     <li *ngFor="let todo of todos">
       <div *ngIf="!this.todo.isComplete">
-        <div {{this.todo.title}}></div>
+        <div class="todoFont">{{this.todo.title}}</div>
         <div>
           <button (click)="onComplete(this.todo.id)" class="btn-floating  waves-effect waves-light blue"> <i class="material-icons">check</i></button>
           <button (click)="onDelete(this.todo.id)" class="btn-floating  waves-effect waves-light red"> <i class="material-icons">delete</i></button>
         </div>
       </div>
     </li>
-
     <br>
-    <br>
+  </ul>
 
-    <h5>Completed tasks</h5>
 
-    <br>
-
+  <!-- step-3: Completed tasks -->
+  <h4>Completed tasks</h4> <hr>
+  <ul class="todo">
     <li *ngFor="let todo of todos">
       <div *ngIf="this.todo.isComplete">
-        <div {{this.todo.title}}></div>
+        <div class="todoFont"> {{this.todo.title}}</div>
         <div>
           <button (click)="onDelete(this.todo.id)" class="btn-floating  waves-effect waves-light red"> <i class="material-icons">delete</i></button>
         </div>

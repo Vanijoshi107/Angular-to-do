@@ -1,20 +1,54 @@
 
-.container{
-    width:300px ;
-    margin: 0 auto;
+h4,h5{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.todo{
+.container{
+    background: rgba(231, 231, 231, 0.63);
+    width:350px ;
+    margin: 20px auto;
+    border: 2px solid rgb(141, 141, 141);
+    border-radius: 25px;
+    padding: 15px;
+}
+label{
+    margin-left: 35px;
+}
+
+.input-field{
+    width: 100%;
+}
+
+.todo, .input-field {
+    background: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 20px;
+}
+.todo li div{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 .todo li{
     margin-top: 5px;
 }
-.todo button{
-    margin-left:5px ;
+.buttn{
+    padding: 17px 3px 0 0;
+}
+
+.todo button, .buttn button{
+    margin:8px ;
+    font-size: 1.1rem;
+}
+.todoFont{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .tdform{
+    background: #fff;
+    border-radius: 25px;
     display: flex;
     flex-direction: row;
     width: 100%;
